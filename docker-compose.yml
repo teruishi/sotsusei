@@ -112,6 +112,11 @@ services:
             - '/dev/shm:/dev/shm'
         networks:
             - sail
+    node:
+        image: node:18
+        volumes:
+        - .:/app
+        working_dir: /app
 networks:
     sail:
         driver: bridge
